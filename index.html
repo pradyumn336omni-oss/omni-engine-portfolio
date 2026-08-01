@@ -130,6 +130,14 @@
             font-size: 12px;
             color: #64748b;
         }
+        /* Mobile Responsive Ledger Shield */
+        .table-responsive-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch; /* Ensures smooth thumb scrolling on iOS/Android */
+            border: 1px solid #333; /* Optional: Adds a subtle border around the scrollable area */
+            border-radius: 8px;
+        }
     </style>
 </head>
 <body>
@@ -166,21 +174,23 @@
     </div>
 
     <!-- RESPONSIVE PATCH APPLIED HERE -->
-    <div class="table-container" style="overflow-x: auto; width: 100%; -webkit-overflow-scrolling: touch;">
-        <table style="min-width: 800px;">
-            <thead>
-                <tr>
-                    <th>Source Document</th>
-                    <th>Client Name</th>
-                    <th>Contact Email</th>
-                    <th>Transaction Date</th>
-                    <th>Total Billed</th>
-                </tr>
-            </thead>
-            <tbody id="ledger-data">
-                <!-- Javascript Injection -->
-            </tbody>
-        </table>
+    <div class="table-container">
+        <div class="table-responsive-wrapper">
+            <table style="min-width: 800px;">
+                <thead>
+                    <tr>
+                        <th>Source Document</th>
+                        <th>Client Name</th>
+                        <th>Contact Email</th>
+                        <th>Transaction Date</th>
+                        <th>Total Billed</th>
+                    </tr>
+                </thead>
+                <tbody id="ledger-data">
+                    <!-- Javascript Injection -->
+                </tbody>
+            </table>
+        </div>
     </div>
 
     <script>
